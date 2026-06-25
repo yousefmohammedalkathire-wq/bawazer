@@ -3,182 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>محمد باوزير | مصمم جرافيك</title>
-    <!-- مكتبة الأيقونات FontAwesome -->
+    <title>محمد باوزير</title>
+    <!-- مكتبة الأيقونات الفخمة للواتساب والإيميل -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* التنسيق الأساسي النظيف والمضمون */
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 2.3rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            color: #888888;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 35px;
+        }
+
+        /* تنسيق زر الـ CV */
+        .btn-cv-container {
+            margin-bottom: 40px;
+        }
+
+        .btn-cv {
+            display: inline-block;
+            background-color: #141414;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            border: 1px solid #262626;
+            transition: all 0.3s ease;
+        }
+
+        .btn-cv:hover {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        /* معرض الأعمال النظيف */
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 16px;
+        }
+
+        /* قسم تواصل معنا الاحترافي الجديد */
+        .contact-section {
+            background-color: #111111;
+            border: 1px solid #1f1f1f;
+            padding: 30px 20px;
+            border-radius: 20px;
+            margin-top: 40px;
+        }
+
+        .contact-section h2 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-p {
+            color: #888888;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+        }
+
+        /* أزرار الاتصال الكبيرة الفخمة لليد والجوال */
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 14px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: transform 0.2s;
+        }
+
+        .contact-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* ألوان الأزرار المخصصة */
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: #ffffff;
+        }
+
+        .btn-email {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .btn-phone {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            border: 1px solid #333333;
+        }
+
+        .address-text {
+            color: #666666;
+            font-size: 0.85rem;
+            margin-top: 25px;
+            line-height: 1.4;
+        }
+
+        .footer-text {
+            color: #444444;
+            font-size: 0.8rem;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- الهيدر العلوي وشريط التنقل -->
-    <header class="main-header">
-        <div class="header-container">
-            <div class="logo">M.BAWAZIR</div>
-            <button class="menu-toggle" id="menuToggle">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+    <div class="container">
+        <!-- الاسم والوصف الأصلي -->
+        <h1>محمد باوزير.</h1>
+        <p class="subtitle">مصمم ديزاينر | أصنع هويات بصرية وتصاميم رقمية فريدة ومبتكرة.</p>
+
+        <!-- زر تحميل الـ CV المرتب -->
+        <div class="btn-cv-container">
+            <a href="mohammed_bawazir_cv.pdf" download class="btn-cv">
+                <i class="fa-solid fa-file-pdf"></i> تحميل السيرة الذاتية (PDF)
+            </a>
         </div>
-    </header>
 
-    <!-- القائمة الجانبية المنسدلة للجوال (اقتباساً من القائمة الجانبية لـ tempneez) -->
-    <div class="sidebar-menu" id="sidebarMenu">
-        <button class="close-sidebar" id="closeSidebar">&times;</button>
-        <nav class="sidebar-nav">
-            <a href="#home">الرئيسية</a>
-            <a href="#about">من نحن (عني)</a>
-            <a href="#cv">السيرة الذاتية</a>
-            <a href="#portfolio">أعمالنا</a>
-            <a href="#contact">تواصل معنا</a>
-        </nav>
-    </div>
-
-    <!-- القسم الأول: الواجهة الترحيبية (Hero Section) -->
-    <section class="hero-section" id="home">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>أحوّل أفكارك إلى تصاميم وهويات احترافية</h1>
-            <p>أنا محمد باوزير، مصمم جرافيك متخصص في بناء الهويات البصرية، التصاميم الرقمية المبتكرة، وإخراج المطبوعات الإعلانية بجودة عالمية للشركات والمشاريع.</p>
-            <div class="hero-buttons">
-                <a href="https://wa.me/967733839555" class="btn-primary"><i class="fa-brands fa-whatsapp"></i> اطلب مشروعك الآن</a>
-                <a href="#portfolio" class="btn-secondary">شاهد أعمالنا</a>
+        <!-- معرض الأعمال النظيف الأصلي -->
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="Screenshot_٢٠٢٦-٠٦-٢٥-١٢-٤٥-٣٩-٨٧٣_com.android.chrome.jpg" alt="تصميم KFC">
             </div>
         </div>
-    </section>
 
-    <!-- القسم الثاني: نبذة (من نحن / عني) -->
-    <section class="about-section" id="about">
-        <div class="container">
-            <h2 class="section-title">من أنا</h2>
-            <p class="about-text">
-                مصمم جرافيك شغوف ومبتكر، أمتلك خلفية قوية جداً في إدارة المطابع والتصميم الإعلاني. أؤمن بأن التصميم ليس مجرد شكل جمالي، بل هو أداة ذكية لبناء الثقة وزيادة تفاعل العملاء وتوسيع نطاق مبيعاتك من خلال أحدث الأفكار الإبداعية والتفكير خارج الصندوق.
+        <!-- قسم تواصل معنا الجديد والأنيق للشركات والمشاريع -->
+        <div class="contact-section">
+            <h2>ابدأ مشروعك القادم الآن</h2>
+            <p class="contact-p">تواصل معي مباشرة لمناقشة أفكارك وتحويلها إلى واقع رقمي مذهل.</p>
+            
+            <div class="contact-buttons">
+                <!-- زر الواتساب الأخضر المباشر -->
+                <a href="https://wa.me/967733839555" target="_blank" class="contact-btn btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp" style="font-size: 1.3rem;"></i> تواصل عبر واتساب
+                </a>
+
+                <!-- زر الإيميل الأبيض الفخم -->
+                <a href="mailto:BAWAZIR100@GMAIL.COM" class="contact-btn btn-email">
+                    <i class="fa-solid fa-envelope" style="font-size: 1.1rem;"></i> مراسلة عبر البريد الإلكتروني
+                </a>
+
+                <!-- زر الاتصال الهاتفي المباشر -->
+                <a href="tel:+967733839555" class="contact-btn btn-phone">
+                    <i class="fa-solid fa-phone" style="font-size: 1.1rem;"></i> اتصال هاتفي مباشر
+                </a>
+            </div>
+
+            <!-- العنوان الأسفل بشكل منسق وخفيف للعين -->
+            <p class="address-text">
+                <i class="fa-solid fa-location-dot"></i> اليمن، شارع الستين الغربي، الحي الليبي بجوار منزل الرئيس عبدربه منصور هادي
             </p>
         </div>
-    </section>
 
-    <!-- القسم الثالث: السيرة الذاتية وعرض المهارات والخبرات (الـ CV المدمج) -->
-    <section class="cv-section" id="cv">
-        <div class="container">
-            <h2 class="section-title">السيرة الذاتية والخبرات</h2>
-            <div class="cv-grid">
-                
-                <!-- عمود المهارات والتعليم -->
-                <div class="cv-card">
-                    <h3><i class="fa-solid fa-graduation-cap"></i> التعليم والدورات</h3>
-                    <ul class="cv-list">
-                        <li><strong>بكالوريوس تصميم جرافيكي:</strong> الجامعة اللبنانية الدولية (2008 - 2012)</li>
-                        <li>دبلوم تصميم دعائي وإخراج صحفي</li>
-                        <li>دورة متقدمة في التصميم والماركتنج (التسويق)</li>
-                        <li>دبلوم برامج ميكروسوفت أوفيس ودورة الثري دي ماكس</li>
-                    </ul>
-                    
-                    <h3 style="margin-top: 30px;"><i class="fa-solid fa-laptop-code"></i> مهارات البرامج والتصوير</h3>
-                    <div class="skills-flex">
-                        <span class="skill-badge">Adobe Photoshop</span>
-                        <span class="skill-badge">Adobe Illustrator</span>
-                        <span class="skill-badge">Adobe InDesign</span>
-                        <span class="skill-badge">Autodesk 3Ds Max</span>
-                        <span class="skill-badge">AutoCAD</span>
-                        <span class="skill-badge">التصوير الفوتوغرافي</span>
-                    </div>
-                </div>
+        <!-- الفوتر البسيط النهائي -->
+        <p class="footer-text">&copy; 2026 جميع الحقوق محفوظة | محمد باوزير</p>
+    </div>
 
-                <!-- عمود الخبرات المهنية -->
-                <div class="cv-card">
-                    <h3><i class="fa-solid fa-briefcase"></i> المسيرة المهنية</h3>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <h4>مدير تسويق | شركة ميدان للتسويق والإعلام</h4>
-                            <span class="date">2014 - حتى الآن</span>
-                        </div>
-                        <div class="timeline-item">
-                            <h4>مصمم جرافيك | شركة جولدن للدعاية والتسويق</h4>
-                            <span class="date">2012 - 2014</span>
-                        </div>
-                        <div class="timeline-item">
-                            <h4>مشرف قسم التصميم ومصمم | مؤسسة أوتوستار</h4>
-                            <span class="date">2012 - 2013</span>
-                        </div>
-                        <div class="timeline-item">
-                            <h4>مصمم جرافيك | ورزان للإعلان والإنتاج الفني</h4>
-                            <span class="date">2011 - 2012</span>
-                        </div>
-                        <div class="timeline-item">
-                            <h4>مصمم مطابع الأوفست والأوت دور</h4>
-                            <p>مطابع برنت آرت (2010) & سعودي ساين (2009)</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <!-- زر تحميل ملف السيرة الذاتية PDF المباشر -->
-            <div class="download-container">
-                <a href="mohammed_bawazir_cv.pdf" download class="btn-download"><i class="fa-solid fa-download"></i> تحميل السيرة الذاتية (PDF)</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- القسم الرابع: معرض الأعمال الإبداعي (Portfolio) -->
-    <section class="portfolio-section" id="portfolio">
-        <div class="container">
-            <h2 class="section-title">معرض أعمالنا</h2>
-            <div class="portfolio-grid">
-                <!-- عمل 1 -->
-                <div class="portfolio-item">
-                    <img src="Screenshot_٢٠٢٦-٠٦-٢٥-١٢-٤٥-٣٩-٨٧٣_com.android.chrome.jpg" alt="تصميم KFC فيلر">
-                </div>
-                <!-- يمكنك تكرار المربع لإضافة أي صور أعمال أخرى مستقبلاً كالتالي:
-                <div class="portfolio-item">
-                    <img src="work2.jpg" alt="اسم العمل">
-                </div> 
-                -->
-            </div>
-        </div>
-    </section>
-
-    <!-- القسم الخامس: هل أنت جاهز للبدء؟ (Call to Action المأخوذ من موقع tempneez) -->
-    <section class="cta-section">
-        <div class="cta-container">
-            <h2>هل أنت جاهز للبدء بمشروعك القادم؟</h2>
-            <p>لا تضيع المزيد من الوقت، تواصل معنا الآن واحصل على استشارة مجانية لتحويل فكرتك إلى واقع رقمي مذهل وجذاب.</p>
-            <a href="https://wa.me/967733839555" class="btn-primary"><i class="fa-brands fa-whatsapp"></i> تواصل معنا عبر واتساب الآن</a>
-        </div>
-    </section>
-
-    <!-- القسم السادس: الفوتر ومعلومات التواصل (Footer) -->
-    <footer class="main-footer" id="contact">
-        <div class="footer-grid">
-            <div class="footer-box">
-                <h3>روابط هامة</h3>
-                <ul>
-                    <li><a href="#home">الرئيسية</a></li>
-                    <li><a href="#about">من نحن</a></li>
-                    <li><a href="#cv">السيرة الذاتية</a></li>
-                    <li><a href="#portfolio">أعمالنا</a></li>
-                </ul>
-            </div>
-            <div class="footer-box">
-                <h3>خدماتنا</h3>
-                <ul>
-                    <li>بناء الهويات البصرية والشعارات</li>
-                    <li>إخراج المطبوعات الورقية والأوفست</li>
-                    <li>تصاميم السوشيال ميديا والإعلانات</li>
-                    <li>النمذجة ثلاثية الأبعاد والتصوير</li>
-                </ul>
-            </div>
-            <div class="footer-box">
-                <h3>تواصل معنا</h3>
-                <p><i class="fa-solid fa-envelope"></i> BAWAZIR100@GMAIL.COM</p>
-                <p><i class="fa-solid fa-phone"></i> +967 733 839 555</p>
-                <p><i class="fa-solid fa-location-dot"></i> اليمن، شارع الستين الغربي، الحي الليبي</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2026 جميع الحقوق محفوظة | محمد باوزير
-        </div>
-    </footer>
-
-    <!-- الكود البرمجي لعمل القائمة الجانبية الذكية باللمس للجوال -->
-    <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const sidebarMenu = document.getElementById('sidebarMenu');
-        const closeSidebar = document.getElementById('Normally I can help with things like this, but I don't seem to have access to that content. You can try again or ask me for something else.
+</body>
+</html>
