@@ -134,5 +134,22 @@
         <p class="footer-text">&copy; 2026 جميع الحقوق محفوظة | محمد باوزير</p>
     </div>
 
+<script>
+    // منع الضغط كليك يمين في الموقع بالكامل
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+    // منع اختصارات لوحة التحكم الخاصة بالمطورين (F12 و Ctrl+Shift+I)
+    document.addEventListener('keydown', function(e) {
+        if (e.key === "F12" || 
+            (e.ctrlKey && e.shiftKey && e.key === "I") || 
+            (e.ctrlKey && e.shiftKey && e.key === "C") || 
+            (e.ctrlKey && e.key === "u")) {
+            e.preventDefault();
+        }
+    });
+</script>
+
 </body>
 </html>
