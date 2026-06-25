@@ -3,49 +3,281 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>السيرة الذاتية | محمد باوزير</title>
+    <title>السيرة الذاتية | M.BAWAZIR</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { background-color: #0a0a0a; color: #ffffff; font-family: 'Segoe UI', sans-serif; text-align: center; margin: 0; padding: 0; }
-        .container { max-width: 500px; margin: 0 auto; padding: 40px 20px; }
-        .btn-back { display: inline-block; color: #888; text-decoration: none; margin-bottom: 20px; font-size: 0.9rem; }
-        h1 { font-size: 1.8rem; margin-bottom: 30px; }
-        .cv-content { background-color: #111111; border: 1px solid #1f1f1f; padding: 25px 20px; border-radius: 16px; text-align: right; margin-bottom: 25px; }
-        .cv-block { margin-bottom: 25px; }
-        .cv-block h3 { font-size: 1.2rem; border-bottom: 1px solid #222; padding-bottom: 8px; margin-bottom: 12px; }
-        .cv-block ul { list-style: none; padding: 0; margin: 0; }
-        .cv-block ul li { margin-bottom: 8px; color: #cccccc; font-size: 0.95rem; }
-        .btn-download-cv { display: inline-block; padding: 12px 25px; background-color: #ffffff; color: #000000; text-decoration: none; font-weight: bold; border-radius: 30px; font-size: 0.95rem; }
+        body { 
+            background-color: #0d0d0d; 
+            color: #ffffff; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            text-align: center; 
+        }
+        .container { 
+            max-width: 550px; 
+            margin: 0 auto; 
+            padding: 40px 20px; 
+        }
+        .btn-back { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px; 
+            color: #666666; 
+            text-decoration: none; 
+            margin-bottom: 25px; 
+            font-size: 0.95rem; 
+            transition: color 0.3s; 
+        }
+        .btn-back:hover { 
+            color: #ffffff; 
+        }
+        h1 { 
+            font-family: 'Arial Black', sans-serif; 
+            font-size: 2.2rem; 
+            font-weight: 900; 
+            margin-bottom: 35px; 
+            background: linear-gradient(180deg, #ffffff 0%, #777777 100%); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+        .cv-timeline { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 20px; 
+            text-align: right; 
+        }
+        .cv-card { 
+            background: linear-gradient(145deg, #141414, #111111); 
+            border: 1px solid #1f1f1f; 
+            border-radius: 20px; 
+            padding: 25px 20px; 
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .cv-card:hover {
+            transform: translateY(-4px);
+            border-color: #333333;
+            box-shadow: 0 15px 30px rgba(255, 255, 255, 0.02);
+        }
+        .card-header { 
+            display: flex; 
+            align-items: center; 
+            gap: 12px; 
+            margin-bottom: 20px; 
+            border-bottom: 1px solid #1c1c1c; 
+            padding-bottom: 12px; 
+        }
+        .card-header i { 
+            font-size: 1.2rem; 
+            color: #ffffff; 
+            background: #1c1c1c; 
+            width: 38px; 
+            height: 38px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            border-radius: 10px; 
+        }
+        .card-header h2 { 
+            font-size: 1.2rem; 
+            margin: 0; 
+            font-weight: bold; 
+        }
+        .cv-list { 
+            list-style: none; 
+            padding: 0; 
+            margin: 0; 
+        }
+        .cv-item { 
+            margin-bottom: 18px; 
+            position: relative; 
+            padding-right: 15px; 
+        }
+        .cv-item::before { 
+            content: ''; 
+            position: absolute; 
+            right: 0; 
+            top: 8px; 
+            width: 6px; 
+            height: 6px; 
+            background-color: #ffffff; 
+            border-radius: 50%; 
+        }
+        .item-title { 
+            font-weight: bold; 
+            color: #ffffff; 
+            font-size: 1rem;
+        }
+        .item-company { 
+            font-size: 0.9rem; 
+            color: #aaaaaa; 
+        }
+        .item-date { 
+            font-size: 0.8rem; 
+            background: #1a1a1a; 
+            padding: 2px 10px; 
+            border-radius: 20px; 
+            color: #888888; 
+            margin-top: 5px; 
+            display: inline-block; 
+            border: 1px solid #262626;
+        }
+        .info-grid { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 12px; 
+        }
+        .info-row { 
+            display: flex; 
+            justify-content: space-between; 
+            border-bottom: 1px solid #161616; 
+            padding-bottom: 8px; 
+            font-size: 0.95rem; 
+        }
+        .info-label { 
+            color: #888888; 
+        }
+        .info-value { 
+            color: #ffffff; 
+            font-weight: 500; 
+        }
+        .skills-container { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 10px; 
+            margin-top: 10px; 
+        }
+        .skill-badge { 
+            background-color: #161616; 
+            color: #dddddd; 
+            padding: 8px 16px; 
+            border-radius: 30px; 
+            font-size: 0.85rem; 
+            border: 1px solid #222222; 
+        }
+        .download-wrapper {
+            margin-top: 40px;
+        }
+        .btn-download-cv {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 35px;
+            background-color: #ffffff;
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 35px;
+            font-size: 1rem;
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        .btn-download-cv:hover {
+            background-color: #cccccc;
+            transform: translateY(-2px);
+        }
+        .footer-text { 
+            color: #444444; 
+            font-size: 0.8rem; 
+            margin-top: 60px; 
+        }
     </style>
 </head>
 <body>
+
     <div class="container">
         <a href="index.html" class="btn-back"><i class="fa-solid fa-arrow-right"></i> العودة للرئيسية</a>
-        <h1>السيرة الذاتية</h1>
-        
-        <div class="cv-content">
-            <div class="cv-block">
-                <h3><i class="fa-solid fa-briefcase"></i> الخبرة والمسيرة المهنية</h3>
-                <ul>
-                    <li>• مدير تسويق | شركة ميدان للتسويق (2014 - الآن)[span_1](start_span)[span_1](end_span)</li>
-                    <li>• مصمم جرافيك | شركة جولدن للدعاية (2012 - 2014)[span_2](start_span)[span_2](end_span)</li>
-                    <li>• مشرف تصميم ومصمم | مؤسسة أوتوستار (2012 - 2013)[span_3](start_span)[span_3](end_span)</li>
-                    <li>• مصمم جرافكس | ورزان للإعلان (2011 - 2012)[span_4](start_span)[span_4](end_span)</li>
-                    <li>• مصمم مطابع | برنت آرت & سعودي ساين[span_5](start_span)[span_5](end_span)</li>
+        <h1>RESUME</h1>
+
+        <div class="cv-timeline">
+            <!-- 1. المعلومات الشخصية -->
+            <div class="cv-card">
+                <div class="card-header"><i class="fa-solid fa-user"></i><h2>المعلومات الشخصية</h2></div>
+                <div class="info-grid">
+                    <div class="info-row"><span class="info-label">الأسم:</span><span class="info-value">محمد عبدالله محمد باوزير</span></div>
+                    <div class="info-row"><span class="info-label">تاريخ الميلاد:</span><span class="info-value">23 / 11 / 1990م</span></div>
+                    <div class="info-row"><span class="info-label">رقم الهاتف:</span><span class="info-value">00967733839555</span></div>
+                    <div class="info-row"><span class="info-label">الإيميل:</span><span class="info-value">BAWAZIR100@GMAIL.COM</span></div>
+                    <div class="info-row"><span class="info-label">العنوان:</span><span class="info-value">صنعاء - شارع الستين الغربي - الحي الليبي بجوار منزل الرئيس عبدربه منصور هادي</span></div>
+                </div>
+            </div>
+
+            <!-- 2. الشهادات الدراسية (مستقلة تماماً ومكتملة) -->
+            <div class="cv-card">
+                <div class="card-header"><i class="fa-solid fa-graduation-cap"></i><h2>الشهادات الدراسية</h2></div>
+                <ul class="cv-list">
+                    <li class="cv-item">
+                        <div class="item-title">بكالوريوس في التصميم الجرافيكي</div>
+                        <div class="item-company">الجامعة اللبنانية الدولية</div>
+                        <div class="item-date">2008 / 2012م</div>
+                    </li>
                 </ul>
             </div>
-            <div class="cv-block">
-                <h3><i class="fa-solid fa-graduation-cap"></i> التعليم والبرامج</h3>
-                <ul>
-                    <li>• بكالوريوس جرافيك ديزاين | الجامعة اللبنانية الدولية[span_6](start_span)[span_6](end_span)</li>
-                    <li>• البرامج: Photoshop, Illustrator, InDesign, 3Ds Max, AutoCAD[span_7](start_span)[span_7](end_span)</li>
+
+            <!-- 3. دورات طويلة وقصيرة المدى (كاملة بناءً على صورتك) -->
+            <div class="cv-card">
+                <div class="card-header"><i class="fa-solid fa-certificate"></i><h2>دورات طويلة وقصيرة المدى</h2></div>
+                <ul class="cv-list">
+                    <li class="cv-item">
+                        <div class="item-title">دبلوم تصميم دعائي وإخراج صحفي</div>
+                        <div class="item-company">الفوتوشوب، الإليستريتور، الإنديزاين، تقنيات متقدمة، الدراسات الأساسية في الفنون والتصميم</div>
+                    </li>
+                    <li class="cv-item">
+                        <div class="item-title">دبلوم في البرامج التطبيقية "ميكروسوفت أوفيس"</div>
+                    </li>
+                    <li class="cv-item">
+                        <div class="item-title">دورة التصميم والتسويق</div>
+                    </li>
+                    <li class="cv-item">
+                        <div class="item-title">دورة في التصوير الديجيتال الفوتوغرافي</div>
+                    </li>
+                    <li class="cv-item">
+                        <div class="item-title">دورة في الثري دي ماكس (3Ds Max)</div>
+                        <div class="item-company">مبتدئ / متوسط النمذجة، أضواء وكاميرات، مواد إبداع وتلاعب، متحرك إضاءة ومادة وكاميرا</div>
+                    </li>
+                    <li class="cv-item">
+                        <div class="item-title">دورات في اللغتين الإنجليزية والفرنسية</div>
+                    </li>
                 </ul>
+            </div>
+
+            <!-- 4. الخبرة المهنية (مرتبة ومكتملة) -->
+            <div class="cv-card">
+                <div class="card-header"><i class="fa-solid fa-briefcase"></i><h2>الخبرة والمسيرة المهنية</h2></div>
+                <ul class="cv-list">
+                    <li class="cv-item"><div class="item-title">مدير تسويق</div><div class="item-company">شركة ميدان للتسويق</div><div class="item-date">1 / 1 / 2014 - الآن</div></li>
+                    <li class="cv-item"><div class="item-title">مصمم في شركة</div><div class="item-company">جولدن للدعاية والإعلان</div><div class="item-date">1 / 11 / 2012 - 1 / 1 / 2014</div></li>
+                    <li class="cv-item"><div class="item-title">مشرف قسم التصميم ومصمم جرافيك</div><div class="item-company">مؤسسة أوتوستار للتجارة</div><div class="item-date">1 / 3 / 2012 - 1 / 5 / 2013</div></li>
+                    <li class="cv-item"><div class="item-title">مصمم جرافكس</div><div class="item-company">ورزان للإعلان والإنتاج الفني</div><div class="item-date">1 / 2 / 2011 - 1 / 2 / 2012</div></li>
+                    <li class="cv-item"><div class="item-title">مصمم في قسم التصميم وطباعة الأوفست</div><div class="item-company">برنت ارت</div><div class="item-date">2010 - 2011</div></li>
+                    <li class="cv-item"><div class="item-title">مصمم في مطابع الأوت دور</div><div class="item-company">سعودي ساين</div><div class="item-date">2009 - 2010</div></li>
+                    <li class="cv-item"><div class="item-title">مصمم مستقل</div><div class="item-company">Freelancer Designer</div></li>
+                </ul>
+            </div>
+
+            <!-- 5. المهارات والتقنيات -->
+            <div class="cv-card">
+                <div class="card-header"><i class="fa-solid fa-wand-magic-sparkles"></i><h2>المهارات والتقنيات</h2></div>
+                <div class="skills-container">
+                    <span class="skill-badge">Adobe Photoshop</span>
+                    <span class="skill-badge">Adobe Illustrator</span>
+                    <span class="skill-badge">Adobe Indesign</span>
+                    <span class="skill-badge">Autodesk 3Ds Max</span>
+                    <span class="skill-badge">Auto Cad</span>
+                    <span class="skill-badge">Microsoft Office</span>
+                    <span class="skill-badge">التصوير الفوتوغرافي</span>
+                </div>
             </div>
         </div>
 
-        <a href="mohammed_bawazir_cv.pdf" download class="btn-download-cv">
-            <i class="fa-solid fa-download"></i> تحميل الـ CV كملف PDF
-        </a>
+        <!-- زر تحميل الـ CV الذي تم إرجاعه وتأكيده -->
+        <div class="download-wrapper">
+            <a href="mohammed_bawazir_cv.pdf" download class="btn-download-cv">
+                <i class="fa-solid fa-cloud-arrow-down"></i> تحميل السيرة الذاتية PDF
+            </a>
+        </div>
+
+        <p class="footer-text">&copy; 2026 جميع الحقوق محفوظة | M.BAWAZIR</p>
     </div>
 </body>
 </html>
