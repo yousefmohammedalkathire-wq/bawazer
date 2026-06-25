@@ -3,165 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- قسم السيرة الذاتية (CV) -->
-<section class="cv-section" id="cv">
-    <div class="container">
-        <h2 class="section-title">السيرة الذاتية</h2>
-        
-        <div class="cv-main-grid">
-            
-            <!-- العمود الأيمن: معلومات شخصية وخبرات -->
-            <div class="cv-column">
-                <div class="cv-block">
-                    <h3 class="block-title"><i class="fas fa-briefcase"></i> الخبرة المهنية</h3>
-                    <div class="cv-item">
-                        <h4>مدير تسويق | شركة ميدان للتسويق</h4>
-                        <span class="cv-date">2014/1/1 - حتى الآن</span>
-                    </div>
-                    <div class="cv-item">
-                        <h4>مصمم جرافيك | شركة "جولدن" للدعاية والإعلان</h4>
-                        <span class="cv-date">2012/11/1 - 2014/1/1</span>
-                    </div>
-                    <div class="cv-item">
-                        <h4>مشرف قسم التصميم ومصمم جرافيك | مؤسسة أوتوستار</h4>
-                        <span class="cv-date">2012/3/1 - 2013/5/1</span>
-                    </div>
-                    <div class="cv-item">
-                        <h4>مصمم جرافكس | ورزان للإعلان والإنتاج الفني</h4>
-                        <span class="cv-date">2011/2/1 - 2012/2/1</span>
-                    </div>
-                    <div class="cv-item">
-                        <h4>مصمم جرافيك | مطابع الأوفست "برنت آرت"</h4>
-                        <span class="cv-date">2010 - 2011</span>
-                    </div>
-                    <div class="cv-item">
-                        <h4>مصمم جرافيك | مطابع الأوت دور "سعودي ساين"</h4>
-                        <span class="cv-date">2009 - 2010</span>
-                    </div>
-                    <div class="cv-item">
-                        <h4>مصمم مستقل (Freelancer)</h4>
-                    </div>
-                </div>
-
-                <div class="cv-block">
-                    <h3 class="block-title"><i class="fas fa-graduation-cap"></i> التعليم والشهادات</h3>
-                    <div class="cv-item">
-                        <h4>بكالوريوس في التصميم الجرافيكي</h4>
-                        <p>الجامعة اللبنانية الدولية - اليمن (2008 - 2012)</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- العمود الأيسر: المهارات والدورات -->
-            <div class="cv-column">
-                <div class="cv-block">
-                    <h3 class="block-title"><i class="fas fa-laptop-code"></i> المهارات والبرامج</h3>
-                    <div class="skills-tags">
-                        <span class="skill-tag">الفوتوشوب (Photoshop)</span>
-                        <span class="skill-tag">الاليسترتور (Illustrator)</span>
-                        <span class="skill-tag">إن ديزاين (InDesign)</span>
-                        <span class="skill-tag">الثري دي ماكس (3Ds Max)</span>
-                        <span class="skill-tag">الأوتو كاد (AutoCAD)</span>
-                        <span class="skill-tag">التصوير الفوتوغرافي</span>
-                        <span class="skill-tag">ميكروسوفت أوفيس</span>
-                    </div>
-                </div>
-
-                <div class="cv-block">
-                    <h3 class="block-title"><i class="fas fa-certificate"></i> الدورات التدريبية</h3>
-                    <ul class="cv-list">
-                        <li>دبلوم تصميم دعائي وإخراج صحفي</li>
-                        <li>دورة في الثري دي ماكس (نمذجة وتحريك متقدم)</li>
-                        <li>دورة في التصميم والتسويق</li>
-                        <li>دورة في التصوير الديجيتال الفوتوغرافي</li>
-                        <li>دورات في اللغتين الإنجليزية والفرنسية</li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- زر تحميل الـ CV المباشر -->
-        <div class="cv-download-zone">
-            <a href="cv.pdf" download class="btn-download-cv">
-                <i class="fas fa-download"></i> تحميل السيرة الذاتية (PDF)
-            </a>
-        </div>
-    </div>
-</section>
-
-    <title>معرض أعمالي | Portfolio</title>
+    <title>محمد باوزير | مصمم جرافيك</title>
+    <!-- مكتبة الأيقونات FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <!-- ربط خط فخم ومودرن من قوقل -->
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- الهيدر العلوي للبايو والاسم -->
+    <!-- الهيدر العلوي وشريط التنقل -->
     <header class="main-header">
-        <h1 class="logo">محمد باوزير.</h1>
-        <p class="bio">مصمم ديزاينر | أصنع هويات بصرية وتصاميم رقمية فريدة ومبتكرة.</p>
+        <div class="header-container">
+            <div class="logo">M.BAWAZIR</div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
     </header>
 
-    <!-- شبكة عرض الأعمال (نفس الموقع اللي عجبك بالضبط) -->
-    <main class="portfolio-grid">
-        
-        <!-- كرت العمل الأول -->
-        <div class="project-card">
-            <img src="images/15.jpg" alt="اسم التصميم">
-            <div class="card-overlay">
-                <h3>اسم المشروع الأول</h3>
-                <p>تصميم هوية / جرافيك</p>
+    <!-- القائمة الجانبية المنسدلة للجوال (اقتباساً من القائمة الجانبية لـ tempneez) -->
+    <div class="sidebar-menu" id="sidebarMenu">
+        <button class="close-sidebar" id="closeSidebar">&times;</button>
+        <nav class="sidebar-nav">
+            <a href="#home">الرئيسية</a>
+            <a href="#about">من نحن (عني)</a>
+            <a href="#cv">السيرة الذاتية</a>
+            <a href="#portfolio">أعمالنا</a>
+            <a href="#contact">تواصل معنا</a>
+        </nav>
+    </div>
+
+    <!-- القسم الأول: الواجهة الترحيبية (Hero Section) -->
+    <section class="hero-section" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>أحوّل أفكارك إلى تصاميم وهويات احترافية</h1>
+            <p>أنا محمد باوزير، مصمم جرافيك متخصص في بناء الهويات البصرية، التصاميم الرقمية المبتكرة، وإخراج المطبوعات الإعلانية بجودة عالمية للشركات والمشاريع.</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/967733839555" class="btn-primary"><i class="fa-brands fa-whatsapp"></i> اطلب مشروعك الآن</a>
+                <a href="#portfolio" class="btn-secondary">شاهد أعمالنا</a>
             </div>
         </div>
+    </section>
 
-        <!-- كرت العمل الثاني -->
-        <div class="project-card">
-            <img src="images/Stationery_Mockup.jpg" alt="اسم التصميم">
-            <div class="card-overlay">
-                <h3>اسم المشروع الثاني</h3>
-                <p>تصميم سوشيال ميديا</p>
+    <!-- القسم الثاني: نبذة (من نحن / عني) -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2 class="section-title">من أنا</h2>
+            <p class="about-text">
+                مصمم جرافيك شغوف ومبتكر، أمتلك خلفية قوية جداً في إدارة المطابع والتصميم الإعلاني. أؤمن بأن التصميم ليس مجرد شكل جمالي، بل هو أداة ذكية لبناء الثقة وزيادة تفاعل العملاء وتوسيع نطاق مبيعاتك من خلال أحدث الأفكار الإبداعية والتفكير خارج الصندوق.
+            </p>
+        </div>
+    </section>
+
+    <!-- القسم الثالث: السيرة الذاتية وعرض المهارات والخبرات (الـ CV المدمج) -->
+    <section class="cv-section" id="cv">
+        <div class="container">
+            <h2 class="section-title">السيرة الذاتية والخبرات</h2>
+            <div class="cv-grid">
+                
+                <!-- عمود المهارات والتعليم -->
+                <div class="cv-card">
+                    <h3><i class="fa-solid fa-graduation-cap"></i> التعليم والدورات</h3>
+                    <ul class="cv-list">
+                        <li><strong>بكالوريوس تصميم جرافيكي:</strong> الجامعة اللبنانية الدولية (2008 - 2012)</li>
+                        <li>دبلوم تصميم دعائي وإخراج صحفي</li>
+                        <li>دورة متقدمة في التصميم والماركتنج (التسويق)</li>
+                        <li>دبلوم برامج ميكروسوفت أوفيس ودورة الثري دي ماكس</li>
+                    </ul>
+                    
+                    <h3 style="margin-top: 30px;"><i class="fa-solid fa-laptop-code"></i> مهارات البرامج والتصوير</h3>
+                    <div class="skills-flex">
+                        <span class="skill-badge">Adobe Photoshop</span>
+                        <span class="skill-badge">Adobe Illustrator</span>
+                        <span class="skill-badge">Adobe InDesign</span>
+                        <span class="skill-badge">Autodesk 3Ds Max</span>
+                        <span class="skill-badge">AutoCAD</span>
+                        <span class="skill-badge">التصوير الفوتوغرافي</span>
+                    </div>
+                </div>
+
+                <!-- عمود الخبرات المهنية -->
+                <div class="cv-card">
+                    <h3><i class="fa-solid fa-briefcase"></i> المسيرة المهنية</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h4>مدير تسويق | شركة ميدان للتسويق والإعلام</h4>
+                            <span class="date">2014 - حتى الآن</span>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>مصمم جرافيك | شركة جولدن للدعاية والتسويق</h4>
+                            <span class="date">2012 - 2014</span>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>مشرف قسم التصميم ومصمم | مؤسسة أوتوستار</h4>
+                            <span class="date">2012 - 2013</span>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>مصمم جرافيك | ورزان للإعلان والإنتاج الفني</h4>
+                            <span class="date">2011 - 2012</span>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>مصمم مطابع الأوفست والأوت دور</h4>
+                            <p>مطابع برنت آرت (2010) & سعودي ساين (2009)</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- زر تحميل ملف السيرة الذاتية PDF المباشر -->
+            <div class="download-container">
+                <a href="mohammed_bawazir_cv.pdf" download class="btn-download"><i class="fa-solid fa-download"></i> تحميل السيرة الذاتية (PDF)</a>
             </div>
         </div>
+    </section>
 
-        <!-- كرت العمل الثالث -->
-        <div class="project-card">
-            <img src="images/شعار الموقغ.jpg" alt="اسم التصميم">
-            <div class="card-overlay">
-                <h3>اسم المشروع الثالث</h3>
-                <p>تعديل صور / إبداعي</p>
+    <!-- القسم الرابع: معرض الأعمال الإبداعي (Portfolio) -->
+    <section class="portfolio-section" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">معرض أعمالنا</h2>
+            <div class="portfolio-grid">
+                <!-- عمل 1 -->
+                <div class="portfolio-item">
+                    <img src="Screenshot_٢٠٢٦-٠٦-٢٥-١٢-٤٥-٣٩-٨٧٣_com.android.chrome.jpg" alt="تصميم KFC فيلر">
+                </div>
+                <!-- يمكنك تكرار المربع لإضافة أي صور أعمال أخرى مستقبلاً كالتالي:
+                <div class="portfolio-item">
+                    <img src="work2.jpg" alt="اسم العمل">
+                </div> 
+                -->
             </div>
         </div>
+    </section>
 
-        <!-- كرت العمل الرابع -->
-        <div class="project-card">
-            <img src="images/istandmol.jpg" alt="اسم التصميم">
-            <div class="card-overlay">
-                <h3>اسم المشروع الرابع</h3>
-                <p>تصميم شعار</p>
+    <!-- القسم الخامس: هل أنت جاهز للبدء؟ (Call to Action المأخوذ من موقع tempneez) -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>هل أنت جاهز للبدء بمشروعك القادم؟</h2>
+            <p>لا تضيع المزيد من الوقت، تواصل معنا الآن واحصل على استشارة مجانية لتحويل فكرتك إلى واقع رقمي مذهل وجذاب.</p>
+            <a href="https://wa.me/967733839555" class="btn-primary"><i class="fa-brands fa-whatsapp"></i> تواصل معنا عبر واتساب الآن</a>
+        </div>
+    </section>
+
+    <!-- القسم السادس: الفوتر ومعلومات التواصل (Footer) -->
+    <footer class="main-footer" id="contact">
+        <div class="footer-grid">
+            <div class="footer-box">
+                <h3>روابط هامة</h3>
+                <ul>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#cv">السيرة الذاتية</a></li>
+                    <li><a href="#portfolio">أعمالنا</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h3>خدماتنا</h3>
+                <ul>
+                    <li>بناء الهويات البصرية والشعارات</li>
+                    <li>إخراج المطبوعات الورقية والأوفست</li>
+                    <li>تصاميم السوشيال ميديا والإعلانات</li>
+                    <li>النمذجة ثلاثية الأبعاد والتصوير</li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h3>تواصل معنا</h3>
+                <p><i class="fa-solid fa-envelope"></i> BAWAZIR100@GMAIL.COM</p>
+                <p><i class="fa-solid fa-phone"></i> +967 733 839 555</p>
+                <p><i class="fa-solid fa-location-dot"></i> اليمن، شارع الستين الغربي، الحي الليبي</p>
             </div>
         </div>
-
-    </main>
-
-    <!-- تذييل الموقع لوسائل التواصل -->
-    <footer class="main-footer">
-        <p>هل لديك مشروع؟ دعنا نتحدث</p>
-        <div class="social-links">
-            <a href="https://instagram.com/ghamar.agency" target="_blank">إنستغرام</a>
-            <a href="https://wa.me/+967781808864" target="_blank">واتساب</a>
+        <div class="footer-bottom">
+            &copy; 2026 جميع الحقوق محفوظة | محمد باوزير
         </div>
     </footer>
 
-    <!-- النافذة المنبثقة لعرض الصورة كاملة -->
-<div id="imageModal" class="modal">
-    <span class="close-btn">&times;</span>
-    <img class="modal-content" id="fullImage">
-</div>
-
-<!-- ربط كود الجافاسكريبت (تأكد من إنشاء هذا الملف) -->
-<script src="script.js"></script>
-
-</body>
-</html>
+    <!-- الكود البرمجي لعمل القائمة الجانبية الذكية باللمس للجوال -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebarMenu = document.getElementById('sidebarMenu');
+        const closeSidebar = document.getElementById('Normally I can help with things like this, but I don't seem to have access to that content. You can try again or ask me for something else.
