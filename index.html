@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>محمد باوزير</title>
-    <!-- مكتبة الأيقونات الفخمة للواتساب والإيميل -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* التنسيق الأساسي النظيف والمضمون */
         body {
             background-color: #0a0a0a;
             color: #ffffff;
@@ -16,65 +14,47 @@
             padding: 0;
             text-align: center;
         }
-
         .container {
             max-width: 500px;
             margin: 0 auto;
             padding: 40px 20px;
         }
-
         h1 {
             font-size: 2.3rem;
             font-weight: bold;
             margin-bottom: 5px;
-            letter-spacing: -1px;
         }
-
         .subtitle {
             color: #888888;
             font-size: 1.05rem;
             line-height: 1.6;
             margin-bottom: 35px;
         }
-
-        /* تنسيق زر الـ CV */
-        .btn-cv-container {
-            margin-bottom: 40px;
+        .main-navigation-boxes {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 50px;
         }
-
-        .btn-cv {
-            display: inline-block;
+        .nav-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
             background-color: #141414;
             color: #ffffff;
             text-decoration: none;
-            padding: 12px 24px;
-            border-radius: 30px;
-            font-size: 0.95rem;
-            border: 1px solid #262626;
+            padding: 18px;
+            border-radius: 14px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: 1px solid #222222;
             transition: all 0.3s ease;
         }
-
-        .btn-cv:hover {
+        .nav-box:hover {
             background-color: #ffffff;
             color: #000000;
         }
-
-        /* معرض الأعمال النظيف */
-        .gallery {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            margin-bottom: 50px;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 16px;
-        }
-
-        /* قسم تواصل معنا الاحترافي الجديد */
         .contact-section {
             background-color: #111111;
             border: 1px solid #1f1f1f;
@@ -82,25 +62,9 @@
             border-radius: 20px;
             margin-top: 40px;
         }
-
-        .contact-section h2 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-        }
-
-        .contact-p {
-            color: #888888;
-            font-size: 0.95rem;
-            margin-bottom: 25px;
-        }
-
-        /* أزرار الاتصال الكبيرة الفخمة لليد والجوال */
-        .contact-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
+        .contact-section h2 { font-size: 1.4rem; margin-bottom: 10px; }
+        .contact-p { color: #888888; font-size: 0.95rem; margin-bottom: 25px; }
+        .contact-buttons { display: flex; flex-direction: column; gap: 12px; }
         .contact-btn {
             display: flex;
             align-items: center;
@@ -111,94 +75,50 @@
             text-decoration: none;
             font-weight: bold;
             font-size: 1rem;
-            transition: transform 0.2s;
         }
-
-        .contact-btn:active {
-            transform: scale(0.98);
-        }
-
-        /* ألوان الأزرار المخصصة */
-        .btn-whatsapp {
-            background-color: #25D366;
-            color: #ffffff;
-        }
-
-        .btn-email {
-            background-color: #ffffff;
-            color: #000000;
-        }
-
-        .btn-phone {
-            background-color: #1a1a1a;
-            color: #ffffff;
-            border: 1px solid #333333;
-        }
-
-        .address-text {
-            color: #666666;
-            font-size: 0.85rem;
-            margin-top: 25px;
-            line-height: 1.4;
-        }
-
-        .footer-text {
-            color: #444444;
-            font-size: 0.8rem;
-            margin-top: 40px;
-        }
+        .btn-whatsapp { background-color: #25D366; color: #ffffff; }
+        .btn-email { background-color: #ffffff; color: #000000; }
+        .btn-phone { background-color: #1a1a1a; color: #ffffff; border: 1px solid #333333; }
+        .address-text { color: #666666; font-size: 0.85rem; margin-top: 25px; }
+        .footer-text { color: #444444; font-size: 0.8rem; margin-top: 40px; }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- الاسم والوصف الأصلي -->
         <h1>محمد باوزير.</h1>
         <p class="subtitle">مصمم ديزاينر | أصنع هويات بصرية وتصاميم رقمية فريدة ومبتكرة.</p>
 
-        <!-- زر تحميل الـ CV المرتب -->
-        <div class="btn-cv-container">
-            <a href="mohammed_bawazir_cv.pdf" download class="btn-cv">
-                <i class="fa-solid fa-file-pdf"></i> تحميل السيرة الذاتية (PDF)
+        <!-- الأزرار تفتح صفحات مستقلة الآن -->
+        <div class="main-navigation-boxes">
+            <a href="portfolio.html" class="nav-box">
+                <i class="fa-solid fa-palette"></i> معرض أعمالي
+            </a>
+            <a href="cv.html" class="nav-box">
+                <i class="fa-solid fa-file-invoice"></i> السيرة الذاتية (CV)
             </a>
         </div>
 
-        <!-- معرض الأعمال النظيف الأصلي -->
-        <div class="gallery">
-            <div class="gallery-item">
-                <img src="Screenshot_٢٠٢٦-٠٦-٢٥-١٢-٤٥-٣٩-٨٧٣_com.android.chrome.jpg" alt="تصميم KFC">
-            </div>
-        </div>
-
-        <!-- قسم تواصل معنا الجديد والأنيق للشركات والمشاريع -->
         <div class="contact-section">
             <h2>ابدأ مشروعك القادم الآن</h2>
             <p class="contact-p">تواصل معي مباشرة لمناقشة أفكارك وتحويلها إلى واقع رقمي مذهل.</p>
             
             <div class="contact-buttons">
-                <!-- زر الواتساب الأخضر المباشر -->
                 <a href="https://wa.me/967733839555" target="_blank" class="contact-btn btn-whatsapp">
-                    <i class="fa-brands fa-whatsapp" style="font-size: 1.3rem;"></i> تواصل عبر واتساب
+                    <i class="fa-brands fa-whatsapp"></i> تواصل عبر واتساب
                 </a>
-
-                <!-- زر الإيميل الأبيض الفخم -->
                 <a href="mailto:BAWAZIR100@GMAIL.COM" class="contact-btn btn-email">
-                    <i class="fa-solid fa-envelope" style="font-size: 1.1rem;"></i> مراسلة عبر البريد الإلكتروني
+                    <i class="fa-solid fa-envelope"></i> مراسلة عبر البريد
                 </a>
-
-                <!-- زر الاتصال الهاتفي المباشر -->
+                <!-- تم استعادة زر الاتصال المباشر هنا -->
                 <a href="tel:+967733839555" class="contact-btn btn-phone">
-                    <i class="fa-solid fa-phone" style="font-size: 1.1rem;"></i> اتصال هاتفي مباشر
+                    <i class="fa-solid fa-phone"></i> اتصال هاتفي مباشر
                 </a>
             </div>
 
-            <!-- العنوان الأسفل بشكل منسق وخفيف للعين -->
-            <p class="address-text">
-                <i class="fa-solid fa-location-dot"></i> اليمن، شارع الستين الغربي، الحي الليبي بجوار منزل الرئيس عبدربه منصور هادي
-            </p>
+            <p class="address-text"><i class="fa-solid fa-location-dot"></i> اليمن، شارع الستين الغربي، الحي الليبي[span_0](start_span)[span_0](end_span)</p>
         </div>
 
-        <!-- الفوتر البسيط النهائي -->
         <p class="footer-text">&copy; 2026 جميع الحقوق محفوظة | محمد باوزير</p>
     </div>
 
