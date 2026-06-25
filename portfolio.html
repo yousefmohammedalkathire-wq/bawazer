@@ -3,27 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>معرض أعمالي | محمد باوزير</title>
+    <title>معرض أعمالي | M.BAWAZIR</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { background-color: #0a0a0a; color: #ffffff; font-family: 'Segoe UI', sans-serif; text-align: center; margin: 0; padding: 0; }
-        .container { max-width: 500px; margin: 0 auto; padding: 40px 20px; }
-        .btn-back { display: inline-block; color: #888; text-decoration: none; margin-bottom: 20px; font-size: 0.9rem; }
-        h1 { font-size: 1.8rem; margin-bottom: 30px; }
-        .gallery { display: flex; flex-direction: column; gap: 20px; }
-        .gallery-item img { width: 100%; height: auto; display: block; border-radius: 16px; }
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #888888;
+            text-decoration: none;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .btn-back:hover {
+            color: #ffffff;
+            transform: translateX(5px);
+        }
+
+        h1 {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+            background: linear-gradient(180deg, #ffffff 0%, #888888 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* شبكة الأعمال */
+        .gallery-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 35px; /* زيادة المسافة لإعطاء مساحة للنصوص */
+        }
+
+        /* كارت العمل الاحترافي */
+        .gallery-item {
+            background-color: #111111;
+            border: 1px solid #1c1c1c;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.4s;
+            cursor: pointer;
+            text-align: right; /* محاذاة النصوص لليمين */
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            border-color: #333333;
+        }
+
+        /* غلاف الصورة والتكبير */
+        .image-wrapper {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.03);
+        }
+
+        /* تفاصيل المشروع تحت الصورة */
+        .project-details {
+            padding: 20px;
+            background: #111111;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ffffff;
+            margin: 0 0 5px 0;
+        }
+
+        .project-category {
+            font-size: 0.9rem;
+            color: #888888;
+            margin: 0;
+        }
+
+        /* --- تأثير التكبير عند الضغط (Lightbox) --- */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .lightbox.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .lightbox.active img {
+            transform: scale(1);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #ffffff;
+            font-size: 2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .footer-text {
+            color: #444444;
+            font-size: 0.8rem;
+            margin-top: 60px;
+        }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <a href="index.html" class="btn-back"><i class="fa-solid fa-arrow-right"></i> العودة للرئيسية</a>
-        <h1>معرض أعمالي</h1>
-        
-        <div class="gallery">
-            <div class="gallery-item">
-                <img src="Screenshot_٢٠٢٦-٠٦-٢٥-١٢-٤٥-٣٩-٨٧٣_com.android.chrome.jpg" alt="تصميم KFC">
+        <a href="index.html" class="btn-back">
+            <i class="fa-solid fa-arrow-right"></i>  العودة للرئيسية
+        </a>
+
+        <h1>PORTFOLIO</h1>
+
+        <div class="gallery-grid">
+            
+            <!-- العمل 1 -->
+            <div class="gallery-item" onclick="openLightbox('images/15.jpg')">
+                <div class="image-wrapper">
+                    <img src="images/15.jpg" alt="مشروع 1">
+                </div>
+                <div class="project-details">
+                    <h3 class="project-title">وجبة كريسبي KFC</h3>
+                    <p class="project-category">نوع العمل: تصميم إعلاني / سوشيال ميديا</p>
+                </div>
             </div>
+
+            <!-- العمل 2 -->
+            <div class="gallery-item" onclick="openLightbox('images/Stationery_Mockup.jpg')">
+                <div class="image-wrapper">
+                    <img src="images/Stationery_Mockup.jpg" alt="مشروع 2">
+                </div>
+                <div class="project-details">
+                    <h3 class="project-title">هوية الشركات Stationery</h3>
+                    <p class="project-category">نوع العمل: تصميم هوية بصرية / مطبوعات</p>
+                </div>
+            </div>
+
+            <!-- العمل 3 -->
+            <div class="gallery-item" onclick="openLightbox('images/istandmol.jpg')">
+                <div class="image-wrapper">
+                    <img src="images/istandmol.jpg" alt="مشروع 3">
+                </div>
+                <div class="project-details">
+                    <h3 class="project-title">استاند مول إعلاني</h3>
+                    <p class="project-category">نوع العمل: تصميم ستاندات / لوحات خارجية</p>
+                </div>
+            </div>
+
         </div>
+
+        <p class="footer-text">&copy; 2026 جميع الحقوق محفوظة | M.BAWAZIR</p>
     </div>
+
+    <!-- كود الـ Lightbox (شاشة التكبير) -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close">&times;</button>
+        <img id="lightbox-img" src="" alt="صورة مكبرة">
+    </div>
+
+    <!-- كود الجافاسكريبت الذكي للتكبير -->
+    <script>
+        function openLightbox(src) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = src;
+            lightbox.classList.add('active');
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+        }
+    </script>
+
 </body>
 </html>
