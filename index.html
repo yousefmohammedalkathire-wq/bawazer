@@ -3,80 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ميدان للتسويق والإعلان | معرض الأعمال</title>
+    <title>معرض أعمالي | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- ربط خط فخم ومودرن من قوقل -->
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="hero-section">
-        <div class="container">
-            <h1 class="main-title">أفكار غير متوقعة</h1>
-            <p class="subtitle">UNEXPECTED IDEAS</p>
-        </div>
+    <!-- الهيدر العلوي للبايو والاسم -->
+    <header class="main-header">
+        <h1 class="logo">محمد باوزير.</h1>
+        <p class="bio">مصمم ديزاينر | أصنع هويات بصرية وتصاميم رقمية فريدة ومبتكرة.</p>
     </header>
 
-    <section class="about-section">
-        <div class="container grid-2">
-            <div class="about-image">
-                <img src="images/about-img.jpg" alt="من نحن">
-            </div>
-            <div class="about-text">
-                <h2>من نحن <span>who we are</span></h2>
-                <p>ميدان للتسويق والإعلان..... شركة يمنية متخصصة بتقديم أفكار إبداعية متميزة لكافة منظمات الأعمال لإشهار منتجاتها وخدماتها في كافة وسائل الإعلام والإعلان المعروفة، وحرصت منذ تأسيسها على أن تساهم في دعم عملائنا بأقل تكلفة تسويقية وإعلانية غير تقليدية وتتميز بالتجديد والابتكار...</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="mission-section">
-        <div class="container grid-2">
-            <div class="mission-text">
-                <h2>رسالتنا <span>Our Mission</span></h2>
-                <p>تسعى ميدان للدعاية والإعلان إلى تقديم خدمات تسويقية وإعلانية متميزة لعملائها من خلال تقديمها لأفكار وحلول إبداعية تمكن العملاء من تحقيق أقصى معدل نمو لأعمالهم من خلال الاعتماد على مواد إبداعية مؤهلة وتجهيزات حديثة في أساليب التسويق والإعلان...</p>
-            </div>
-            <div class="mission-image">
-                <img src="images/mission-img.jpg" alt="رسالتنا">
+    <!-- شبكة عرض الأعمال (نفس الموقع اللي عجبك بالضبط) -->
+    <main class="portfolio-grid">
+        
+        <!-- كرت العمل الأول -->
+        <div class="project-card">
+            <img src="images/project1.jpg" alt="اسم التصميم">
+            <div class="card-overlay">
+                <h3>اسم المشروع الأول</h3>
+                <p>تصميم هوية / جرافيك</p>
             </div>
         </div>
-    </section>
 
-    <section class="services-section">
-        <div class="container">
-            <h2>خدماتنا</h2>
-            <div class="services-list">
-                <div class="service-item"><span>✦</span> تسويق خارجي.</div>
-                <div class="service-item"><span>✦</span> خدمات التصاميم الهندسية ورسم المخططات (2D + 3D).</div>
-                <div class="service-item"><span>✦</span> خدمات التصميم الإبداعي.</div>
-                <div class="service-item"><span>✦</span> خدمات الطباعة بأحدث مطابع الأوفست.</div>
-                <div class="service-item"><span>✦</span> المواد الدعائية بكافة أنواعها.</div>
-                <div class="service-item"><span>✦</span> خدمات التصوير الثابت والفيديو وإخراجها ومنتجاتها.</div>
-                <div class="service-item"><span>✦</span> خدمات التصميم الإلكتروني وتصميم وبرمجة المواقع.</div>
-                <div class="service-item"><span>✦</span> أحدث وسائل الطباعة الرقمية.</div>
-                <div class="service-item"><span>✦</span> خدمات التصميم الداخلي الديكور والخارجي الواجهات وعمل الكلادينج.</div>
-                <div class="service-item"><span>✦</span> تصميم وتركيب اللوحات الإعلانية بكافة أنواعها.</div>
+        <!-- كرت العمل الثاني -->
+        <div class="project-card">
+            <img src="images/project2.jpg" alt="اسم التصميم">
+            <div class="card-overlay">
+                <h3>اسم المشروع الثاني</h3>
+                <p>تصميم سوشيال ميديا</p>
             </div>
         </div>
-    </section>
 
-    <section class="portfolio-section">
-        <div class="container">
-            <h2>معرض أعمالنا</h2>
-            <div class="portfolio-grid">
-                <div class="project-card">
-                    <img src="images/project1.jpg" alt="مشروع">
-                </div>
-                <div class="project-card">
-                    <img src="images/project2.jpg" alt="مشروع">
-                </div>
+        <!-- كرت العمل الثالث -->
+        <div class="project-card">
+            <img src="images/istandmol.jpg" alt="اسم التصميم">
+            <div class="card-overlay">
+                <h3>اسم المشروع الثالث</h3>
+                <p>تعديل صور / إبداعي</p>
             </div>
         </div>
-    </section>
 
-    <div id="imageModal" class="modal">
-        <span class="close-btn">&times;</span>
-        <img class="modal-content" id="fullImage">
-    </div>
+        <!-- كرت العمل الرابع -->
+        <div class="project-card">
+            <img src="images/project4.jpg" alt="اسم التصميم">
+            <div class="card-overlay">
+                <h3>اسم المشروع الرابع</h3>
+                <p>تصميم شعار</p>
+            </div>
+        </div>
 
-    <script src="script.js"></script>
+    </main>
+
+    <!-- تذييل الموقع لوسائل التواصل -->
+    <footer class="main-footer">
+        <p>هل لديك مشروع؟ دعنا نتحدث</p>
+        <div class="social-links">
+            <a href="https://instagram.com/username" target="_blank">إنستغرام</a>
+            <a href="https://wa.me/yournumber" target="_blank">واتساب</a>
+        </div>
+    </footer>
+
+    <!-- النافذة المنبثقة لعرض الصورة كاملة -->
+<div id="imageModal" class="modal">
+    <span class="close-btn">&times;</span>
+    <img class="modal-content" id="fullImage">
+</div>
+
+<!-- ربط كود الجافاسكريبت (تأكد من إنشاء هذا الملف) -->
+<script src="script.js"></script>
+
 </body>
 </html>
